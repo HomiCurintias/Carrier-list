@@ -64,8 +64,8 @@ def index():
 <body>
 
         <div class="sep"></div>
-        <h1><a href="/golden">1. The Golden</a></h1>
-        <h2>by BoBoBoBoBoBoBo</h2>
+        <h1><a href="/golden">1. Judgement Knights</a></h1>
+        <h2>by HangerLord</h2>
 
         <div class="sep"></div>
         <h1><a href="/widestep">2. Widestep</a></h1>
