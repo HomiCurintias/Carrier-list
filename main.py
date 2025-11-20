@@ -187,7 +187,10 @@ def index():
         <div class="sep"></div>
         <h1>31. I Cant Fix You</h1>
         <h2>by IronIngot</h2>
-
+Deploy failed for c069638: Update main.py
+Timed out
+Port scan timeout reached, no open ports detected on 0.0.0.0. Detected open ports on localhost -- did you mean to bind one of these to 0.0.0.0?
+November 20, 2025 at 3:04 PM
         <div class="sep"></div>
         <h1>32. Shonic wave</h1>
         <h2>by Guimonteiro</h2>
@@ -636,5 +639,3 @@ def ICDX():
 def info():
     return """<p><h1>this website was made by: ryofreefire32@gmail.com (Silva) and @yuridakbrada</h1></p>
 <p><h2><a href="/">Back</a></h2></p>"""
-
-app.run()
