@@ -1,8 +1,10 @@
-import jester
+from flask import Flask
 
-routes:
-    get "/":
-        resp """<!DOCTYPE html>
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -272,5 +274,10 @@ routes:
 </body>
 </html>"""
 
-    get "/info":
-        resp """<p><h1>this website was made by: ryofreefire32@gmail.com (Silva)</h1></p> <p><h2><a href="/">Back</h2>"""
+@app.route("/info")
+def info():
+    return """<p><h1>this website was made by: ryofreefire32@gmail.com (Silva)</h1></p>
+<p><h2><a href="/">Back</a></h2></p>"""
+
+if __name__ == "__main__":
+    app.run(debug=True)
