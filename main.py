@@ -639,3 +639,7 @@ def ICDX():
 def info():
     return """<p><h1>this website was made by: ryofreefire32@gmail.com (Silva) and @yuridakbrada</h1></p>
 <p><h2><a href="/">Back</a></h2></p>"""
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port)
