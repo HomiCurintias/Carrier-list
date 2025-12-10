@@ -43,3 +43,66 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.logo{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 40px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.tab {
+    padding: 12px 28px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #444;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+}
+
+.tab:hover {
+    background: #f0f0f0;
+    text-decoration: none;
+}
+
+.tab.ativa {
+    border-bottom: 3px solid #888;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.container img {
+    width: 50px;
+}
+
+.containers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.containers img {
+    width: 200px;
+}
