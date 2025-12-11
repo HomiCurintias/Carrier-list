@@ -1,17 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - Carrier List</title>
+    <link rel="shortcut icon" href="assets/logos/carrierlist_face.png" type="image/x-icon">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: block;
+    margin: auto;
+}
+
+button{
+    width: 10%;
+    padding: 10px;
+    background: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+    display: block;
+    margin: auto;
+}
+
+button:hover{
+    background: #0d7adf;
+}
+
+a{
+    text-decoration-line: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+    </style>
 </head>
 <body>
-    <h2>Login</h2>
-    <input id="login_name" placeholder="Name"><br>
-    <input id="login_pass" placeholder="Password" type="password"><br>
-    <button onclick="requestLogin()">Login</button><br>
-    <a href="/register">register</a>
-    <p id="login_result"></p>
+<div class="logo">
+    <img src="assets/logos/carrierlist_logo2.png" height="100">
+</div>
+        <h2>Login</h2>
+            <input id="login_name" placeholder="Nome"><br>
+                <input id="login_pass" placeholder="Senha" type="password"><br>
+                    <button onclick="requestLogin()">Login</button><br>
+                <a href="/register">Registrar</a>
+            <p id="login_result"></p>
 
 <script>
 async function requestLogin() {
