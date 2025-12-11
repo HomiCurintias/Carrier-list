@@ -1,2 +1,4 @@
 flask
 gunicorn
+pymongo
+argon2-cffi
