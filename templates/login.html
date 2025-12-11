@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <input id="login_name" placeholder="Name"><br>
+    <input id="login_pass" placeholder="Password" type="password"><br>
+    <button onclick="requestLogin()">Login</button>
+    <p id="login_result"></p>
+
+<script>
+async function requestLogin() {
+    const username = document.getElementById("login_name").value;
+    const password = document.getElementById("login_pass").value;
+
+    const response = await fetch("/api/login", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            user: username,
+            pass: password
+        })
+    });
+
+    const data = await response.json();
+    document.getElementById("login_result").innerText = JSON.stringify(data);
+}
+</script>
+</body>
+</html>

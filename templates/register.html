@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h2>Register</h2>
+    <input id="reg_name" placeholder="Name"><br>
+    <input id="reg_pass" placeholder="Password" type="password"><br>
+    <button onclick="requestRegister()">Register</button>
+    <p id="reg_result"></p>
+
+<script>
+async function requestRegister() {
+    const username = document.getElementById("reg_name").value;
+    const password = document.getElementById("reg_pass").value;
+
+    const response = await fetch("/api/register", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            user: username,
+            pass: password
+        })
+    });
+
+    const data = await response.json();
+    document.getElementById("reg_result").innerText = JSON.stringify(data);
+}
+</script>
+</body>
+</html>
