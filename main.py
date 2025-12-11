@@ -11,7 +11,7 @@ users = db["users"]
 ph = PasswordHasher()
 
 app = Flask(__name__)
-app.secret_key = os.getenv("secret") or "uma_chave_secreta_aqui"
+app.secret_key = os.getenv("secret")
 
 def get_users_doc():
     doc = users.find_one({"_id": "users_data"})
