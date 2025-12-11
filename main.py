@@ -3,17 +3,13 @@ from pymongo import MongoClient
 from argon2 import PasswordHasher
 from argon2.exceptions import VerifyMismatchError
 import os
-import ssl
 
 MONGO_URI = os.getenv("mongo_url")
 
 client = MongoClient(
     MONGO_URI,
     serverSelectionTimeoutMS=5000,
-    tlsAllowInvalidCertificates=True,
-    tlsAllowInvalidHostnames=True,
-    ssl=True,
-    ssl_cert_reqs=ssl.CERT_NONE
+    tlsAllowInvalidCertificates=True
 )
 
 db = client["data-base"]
