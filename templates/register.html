@@ -30,6 +30,9 @@ async function requestRegister() {
 
     const data = await response.json();
     document.getElementById("reg_result").innerText = JSON.stringify(data);
+
+    console.log("username:", username);
+    console.log("password:", password);
 }
 </script>
 </body>
