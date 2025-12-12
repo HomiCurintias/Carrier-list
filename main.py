@@ -102,16 +102,18 @@ def login():
         print(f"Login error: {e}")
         return jsonify({"error": "login failed"}), 500
 
-@app.route("/api/me", methods=["GET"])
+@app.route("/me", methods=["GET"])
 def me():
     if "user" in session:
-        return jsonify({"logged_in_as": session["user"]})
-    return jsonify({"logged_in_as": None})
+        return f"""hi, " + {session["user"]}<br><a href="/logout>Logout</a>"""""
+    
+    return redirect("/login")
 
-@app.route("/api/logout", methods=["POST"])
+@app.route("/logout", methods=["POST"])
 def logout():
     session.pop("user", None)
-    return jsonify({"status": "logged_out"}), 200
+    
+    return redirect("/")
 
 @app.route("/")
 def home():
