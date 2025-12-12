@@ -105,11 +105,11 @@ def login():
 @app.route("/me", methods=["GET"])
 def me():
     if "user" in session:
-        return f"""hi, " + {session["user"]}<br><a href="/logout>Logout</a>"""""
+        return f"""hi, "  {session["user"]} "<br><a href="/logout">Logout</a>""""
     
     return redirect("/login")
 
-@app.route("/logout", methods=["POST"])
+@app.route("/logout", methods=["GET"])
 def logout():
     session.pop("user", None)
     
