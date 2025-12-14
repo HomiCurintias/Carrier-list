@@ -107,13 +107,13 @@ def me():
     if "user" in session:
         return f'hi, {session["user"]}<br><a href="/logout">Logout</a>'
     
-    return redirect("/login")
+    return redirect(url_for("loginFront"))
 
 @app.route("/logout", methods=["GET"])
 def logout():
     session.pop("user", None)
     
-    return redirect("/")
+    return redirect(url_for("/"))
 
 @app.route("/")
 def home():
